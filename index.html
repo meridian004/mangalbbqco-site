@@ -1,281 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Mangal BBQ Co – Hybrid Mangal x Parrilla x Smoker</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        :root {
-           --primary-color: #B22222;
-        --accent-color: #FFD700;
-            --background-color: #1A1A1A;
-        --text-color: #FFFFFF;
-        --secondary-color: #FFD700;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            background-color: rgba(0,0,0,0.7);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        header nav a {
-            color: var(--text-color);
-            text-decoration: none;
-            margin-left: 1.5rem;
-            font-size: 0.9rem;
-            transition: color 0.2s;
-        }
-        header nav a:hover {
-            color: var(--primary-color);
-        }
-        .hero {
-            height: 90vh;
-            background-image: url('https://source.unsplash.com/1920x1080/?barbecue,grill');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            position: relative;
-        }
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-        }
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            padding: 0 1rem;
-        }
-        .hero-content h2 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #fff;
-        }
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: #ccc;
-        }
-        .btn {
-            display: inline-block;
-            padding: 0.8rem 1.8rem;
-            background-color: var(--primary-color);
-            color: #fff;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .features {
-            padding: 4rem 2rem;
-            background-color: var(--secondary-color);
-            text-align: center;
-        }
-        .features h3 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: #fff;
-        }
-        .feature-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-        }
-        .feature-item {
-            flex: 1 1 250px;
-            background-color: var(--background-color);
-            padding: 2rem;
-            border-radius: 8px;
-            text-align: center;
-        }
-        .feature-item h4 {
-            margin-top: 1rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary-color);
-        }
-        .feature-item p {
-            font-size: 0.9rem;
-            color: #ccc;
-        }
-        .product {
-            padding: 4rem 2rem;
-            background-color: var(--background-color);
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-        .product-image {
-            flex: 1 1 400px;
-            text-align: center;
-        }
-        .product-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        .product-info {
-            flex: 1 1 400px;
-            padding: 2rem;
-        }
-        .product-info h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-        .product-info p {
-            margin-bottom: 1rem;
-            color: #ccc;
-        }
-        .attachments {
-            padding: 4rem 2rem;
-            background-color: var(--secondary-color);
-        }
-        .attachments h3 {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: #fff;
-        }
-        .attachments-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-        }
-        .attachment-item {
-            flex: 1 1 200px;
-            text-align: center;
-        }
-        .attachment-item img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        .attachment-item h4 {
-            margin-top: 0.5rem;
-            color: var(--primary-color);
-        }
-        .about {
-            padding: 4rem 2rem;
-            background-color: var(--background-color);
-            text-align: center;
-        }
-        .about h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-        .about p {
-            max-width: 800px;
-            margin: 0 auto;
-            color: #ccc;
-        }
-        footer {
-            padding: 2rem;
-            text-align: center;
-            background-color: var(--secondary-color);
-            color: #ccc;
-        }
-        @media (max-width: 768px) {
-            .hero-content h2 {
-                font-size: 2.5rem;
-            }
-            header nav {
-                display: none;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mangal BBQ Co. | Kyrgyz Shashlik Grills</title>
+  <meta name="description" content="U.S.-made Mangal grills for perfect shashlik. Fire. Family. Kyrgyzstan.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {--red:#B22222;--gold:#FFD700;--dark:#1A1A1A;--light:#FFFFFF;}
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {font-family:'Montserrat',sans-serif;background:var(--light);color:var(--dark);line-height:1.6;}
+    .hero {position:relative;height:100vh;background:url('https://images.unsplash.com/photo-1598514982901-2f0471ed2ccd?auto=format&fit=crop&q=80') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;color:white;}
+    .overlay {position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.7),rgba(0,0,0,0.4));}
+    .content {position:relative;z-index:2;max-width:90%;padding:2rem;}
+    h1 {font-family:'Playfair Display',serif;font-size:3.5rem;margin-bottom:1rem;text-shadow:0 2px 8px rgba(0,0,0,0.6);}
+    p {font-size:1.5rem;margin-bottom:2rem;}
+    .btn {background:var(--red);color:white;padding:1rem 2.5rem;font-size:1.2rem;border:none;border-radius:50px;cursor:pointer;transition:0.3s;box-shadow:0 4px 15px rgba(178,34,34,0.4);}
+    .btn:hover {background:var(--gold);color:var(--dark);transform:translateY(-2px);}
+    .logo {width:280px;margin-bottom:2rem;filter:drop-shadow(0 4px 12px rgba(0,0,0,0.5));}
+    @media (max-width:768px){h1{font-size:2.5rem;}p{font-size:1.2rem;}.btn{padding:0.8rem 2rem;font-size:1.1rem;}}
+  </style>
 </head>
 <body>
-<header>
-    <h1>Mangal BBQ Co.</h1>
-    <nav>
-        <a href="#features">Features</a>
-        <a href="#product">Product</a>
-        <a href="#attachments">Accessories</a>
-        <a href="#about">About</a>
-    </nav>
-</header>
-<section class="hero">
-    <div class="hero-content">
-        <h2>The Ultimate Hybrid BBQ</h2>
-        <p>Shashlik Perfected. Fire Reborn.
+  <section class="hero">
+    <svg class="logo" viewBox="0 0 260 110" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(75,55)">
+        <path d="M-34-22 C-38-14,-40-8,-37 0 C-34 8,-29 12,-24 14 C-20 16,-14 16,-11 14 C-8 12,-6 8,-8 0 C-10-8,-14-12,-20-14 C-26-16,-31-14,-34-22 Z M-28 22 L-31 35 L-25 35 Z M-19 22 L-17 35 L-22 35 Z" fill="none" stroke="white" stroke-width="3.2"/>
+        <path d="M34-22 C38-14,40-8,37 0 C34 8,29 12,24 14 C20 16,14 16,11 14 C8 12,6 8,8 0 C10-8,14-12,20-14 C26-16,31-14,34-22 Z M28 22 L31 35 L25 35 Z M19 22 L17 35 L22 35 Z" fill="none" stroke="white" stroke-width="3.2"/>
+      </g>
+      <text x="130" y="78" font-family="'Playfair Display',serif" font-size="36" font-weight="700" fill="white" text-anchor="middle">Mangal BBQ Co.</text>
+    </svg>
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>Shashlik Perfected.</h1>
+      <p>Fire Reborn.</p>
+      <button class="btn" onclick="alert('Pre-order live! Email: hello@mangalbbqco.com')">Pre-Order Now</button>
     </div>
-</section>
-<section id="features" class="features">
-    <h3>Key Features</h3>
-    <div class="feature-grid">
-        <div class="feature-item">
-            <h4>Argentine V‑grate Lift</h4>
-            <p>Elevate or lower your fire with a hand‑wheel mechanism for precision heat control.</p>
-        </div>
-        <div class="feature-item">
-            <h4>Rotating Skewers</h4>
-            <p>Cook up to nine skewers evenly thanks to manual or motorized rotation.</p>
-        </div>
-        <div class="feature-item">
-            <h4>Half‑Lid Smoker</h4>
-            <p>Capture smoke and heat on one side for slow smoking and indirect cooking.</p>
-        </div>
-        <div class="feature-item">
-            <h4>Service & Storage</h4>
-            <p>Integrated side shelves and lower rack keep your tools and fuel within reach.</p>
-        </div>
-    </div>
-</section>
-<section id="product" class="product">
-    <div class="product-image">
-        <img src="https://source.unsplash.com/800x600/?grill,smoker,bbq" alt="Mangal BBQ hybrid grill">
-    </div>
-    <div class="product-info">
-        <h3>Mangal Hybrid Grill</h3>
-        <p>Our flagship model combines the searing power of a mangal, the adjustability of an asado and the smoky flavour of an American barbecue.</p>
-        <p>Dimensions: 59.5&nbsp;in (w) × 27&nbsp;in (d) × 47&nbsp;in (h)</p>
-        <p>Materials: heavy‑gauge steel body, stainless steel hardware, cast iron grates.</p>
-        <a href="#attachments" class="btn">See Accessories</a>
-    </div>
-</section>
-<section id="attachments" class="attachments">
-    <h3>Accessories</h3>
-    <div class="attachments-grid">
-        <div class="attachment-item">
-            <img src="https://source.unsplash.com/400x300/?bbq,skewers" alt="Skewer set">
-            <h4>Skewer Set</h4>
-        </div>
-        <div class="attachment-item">
-            <img src="https://source.unsplash.com/400x300/?griddle,bbq" alt="Flat top griddle">
-            <h4>Flat Top Griddle</h4>
-        </div>
-        <div class="attachment-item">
-            <img src="https://source.unsplash.com/400x300/?smoker,wood" alt="Wood smoker box">
-            <h4>Smoker Box</h4>
-        </div>
-    </div>
-</section>
-<section id="about" class="about">
-    <h3>About Mangal BBQ Co.</h3>
-    <p>Founded in Riverside, California, Mangal BBQ Co. merges ancient grilling traditions with modern craftsmanship. Our hybrid grills are engineered to last a lifetime, giving you the power to sear, smoke and skewer with absolute control.</p>
-</section>
-<footer>
-    &copy; 2025 Mangal BBQ Co. All rights reserved.
-</footer>
+  </section>
 </body>
 </html>
